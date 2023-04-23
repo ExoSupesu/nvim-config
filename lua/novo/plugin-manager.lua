@@ -36,8 +36,20 @@ require("lazy").setup({
       {'hrsh7th/cmp-nvim-lsp'}, -- Required
       {'L3MON4D3/LuaSnip'},     -- Required
     }
+  },
+  {'nvim-lualine/lualine.nvim',depedencies = { 'nvim-tree/nvim-web-devicons', opt = true },},
+  {
+  "nvim-neo-tree/neo-tree.nvim",
+    branch = "v2.x",
+    dependencies = { 
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+    }
   }
 })
 require("novo.plugins.Telescope")
 require("novo.plugins.Treesitter")
 require("novo.plugins.LspZ")
+require("novo.plugins.Lualine")
+require("novo.plugins.explorer")
