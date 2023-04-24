@@ -16,6 +16,8 @@ require("lazy").setup({
       dependencies = { 'nvim-lua/plenary.nvim' }
     },
     {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'},
+    {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
+    {'folke/tokyonight.nvim'},
     -- LSP ZERO
     {
     'VonHeikemen/lsp-zero.nvim',
@@ -53,3 +55,4 @@ require("novo.plugins.Treesitter")
 require("novo.plugins.LspZ")
 require("novo.plugins.Lualine")
 require("novo.plugins.explorer")
+require("novo.plugins.BufferLine")
