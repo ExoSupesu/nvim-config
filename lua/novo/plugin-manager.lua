@@ -11,6 +11,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
+    {"xiyaowong/transparent.nvim"},
     {
     'nvim-telescope/telescope.nvim', tag = '0.1.1',
       dependencies = { 'nvim-lua/plenary.nvim' }
