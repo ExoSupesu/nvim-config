@@ -76,6 +76,7 @@ local opts = {
 }
 
 local mappings = {
+  ["u"] = {"<cmd>UndotreeToggle","UndoTree"},
   ["n"] = {"<cmd>Navbuddy<cr>","NavBuddy"},
   ["e"] = { "<cmd>NeoTreeFocusToggle<cr>", "Explorer" },
   ["w"] = { "<cmd>w!<CR>", "Save" },
@@ -108,7 +109,7 @@ local mappings = {
     l = { "<cmd>Lazy log<cr>", "Log" },
     d = { "<cmd>Lazy debug<cr>", "Debug" },
   },
-  s = {
+  f = {
     name = "Search",
     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
     c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
