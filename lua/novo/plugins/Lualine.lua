@@ -1,3 +1,4 @@
+local navic = require("nvim-navic")
 require("lualine").setup({
   options  =  {
      theme = 'onedark',
@@ -5,5 +6,18 @@ require("lualine").setup({
      disabled_filetypes  = {
 	statusline={'neo-tree'}
      }
-  }
+  },
+  winbar = {
+    lualine_c = {
+        {
+          function()
+              return navic.get_location()
+          end,
+          cond = function()
+              return navic.is_available()
+          end
+        },
+    }
+}
+
 })

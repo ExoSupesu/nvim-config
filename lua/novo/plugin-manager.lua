@@ -11,6 +11,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
+    {"SmiteshP/nvim-navic",
+    dependencies = "neovim/nvim-lspconfig"
+    },
     {"xiyaowong/transparent.nvim"},
     {
     'nvim-telescope/telescope.nvim', tag = '0.1.1',
@@ -61,3 +64,4 @@ require("novo.plugins.LspZ")
 require("novo.plugins.Lualine")
 require("novo.plugins.explorer")
 require("novo.plugins.BufferLine")
+require("novo.plugins.navic")

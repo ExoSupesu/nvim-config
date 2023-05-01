@@ -1,3 +1,4 @@
+local  navic = require("nvim-navic")
 local lsp = require('lsp-zero').preset({
   float_border = 'rounded',
   call_servers = 'local',
@@ -15,6 +16,7 @@ local lsp = require('lsp-zero').preset({
 
 lsp.on_attach(function(client, bufnr)
   lsp.default_keymaps({buffer = bufnr})
+  navic.attach(client, bufnr)
 end)
 
 lsp.set_sign_icons({
