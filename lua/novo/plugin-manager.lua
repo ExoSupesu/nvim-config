@@ -11,6 +11,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
+  { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap"} },
   {
     "neovim/nvim-lspconfig",
     dependencies = {
@@ -75,3 +76,4 @@ require("novo.plugins.Lualine")
 require("novo.plugins.explorer")
 require("novo.plugins.BufferLine")
 require("novo.plugins.breadcrumbs")
+require("novo.plugins.dap")
