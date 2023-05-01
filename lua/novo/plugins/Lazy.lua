@@ -11,6 +11,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
+  {
+    "folke/which-key.nvim",
+  },
   {"numToStr/Comment.nvim"},
   { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap"} },
   {

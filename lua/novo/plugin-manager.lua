@@ -1,4 +1,5 @@
 require("novo.plugins.Lazy")
+require("novo.plugins.WhichKey")
 require("novo.plugins.Comment")
 require("novo.plugins.navic")
 require("novo.plugins.Telescope")
