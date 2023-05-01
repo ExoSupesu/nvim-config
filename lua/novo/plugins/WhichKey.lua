@@ -76,11 +76,17 @@ local opts = {
 }
 
 local mappings = {
+  
   ["u"] = {"<cmd>UndotreeToggle","UndoTree"},
   ["n"] = {"<cmd>Navbuddy<cr>","NavBuddy"},
   ["e"] = { "<cmd>NeoTreeFocusToggle<cr>", "Explorer" },
   ["w"] = { "<cmd>w!<CR>", "Save" },
   ["q"] = { "<cmd>q!<CR>", "Quit" },
+  h  =  {
+    name =  "Harpoon",
+    m  =  {"<cmd>lua  require'harpoon.mark'.add_file()<cr>","Mark"},
+    h =  {"<cmd>lua require'harpoon.ui'.toggle_quick_menu()<cr>","Harpoon UI"},
+  },
   d = {
     name = "Debug",
     t = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint" },
