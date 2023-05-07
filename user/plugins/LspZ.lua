@@ -5,16 +5,11 @@ local cmp_action = require('lsp-zero').cmp_action()
 cmp.setup({
       sources = {
         {name = 'nvim_lsp'},
-	{ name = "path" },
+	      { name = "path" },
         { name = "luasnip" },
         { name = "cmp_tabnine" },
         { name = "nvim_lua" },
         { name = "buffer" },
-        { name = "calc" },
-        { name = "emoji" },
-        { name = "treesitter" },
-        { name = "crates" },
-        { name = "tmux" },
       },
       window = {
         completion = cmp.config.window.bordered(),
