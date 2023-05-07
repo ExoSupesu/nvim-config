@@ -11,7 +11,13 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
-  {"rcarriga/nvim-notify"},
+  {
+  "folke/noice.nvim",
+  requires = {
+    "MunifTanjim/nui.nvim",
+    "rcarriga/nvim-notify",
+    }
+},
   {"olimorris/onedarkpro.nvim"},
   {"nordtheme/vim"},
   {"jose-elias-alvarez/null-ls.nvim"},
