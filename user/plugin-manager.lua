@@ -13,5 +13,4 @@ require("user.plugins.dap")
 require("user.plugins.autopair")
 require("user.plugins.n-ls")
 require("user.plugins.prettify")
-
-vim.notify=require("notify")
+require("user.plugins.notification")
