@@ -11,6 +11,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
+  {"jose-elias-alvarez/null-ls.nvim"},
+  {"MunifTanjim/prettier.nvim"},
   {"windwp/nvim-autopairs"},
   {"ThePrimeagen/harpoon"},
   {"mbbill/undotree"},
