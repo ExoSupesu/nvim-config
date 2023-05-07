@@ -1,4 +1,4 @@
-require("novo.plugins.navic")
+require("user.plugins.navic")
 
 local navbuddy = require("nvim-navbuddy")
 local actions = require("nvim-navbuddy.actions")
