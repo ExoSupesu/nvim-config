@@ -8,9 +8,9 @@
   <p align="center">
     An awesome Neovim config that I personally  use!
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/ExoSupesu/nvim-config/issues/new/choose">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/ExoSupesu/nvim-config/issues/new/choose">Request Feature</a>
     <br />
     <br /
   </p>
