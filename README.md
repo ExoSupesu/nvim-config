@@ -51,14 +51,14 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Clone the repo at  `~/.config/nvim/lua/` or at `~/AppData/Local/nvim` if installing on  windows 
+1. Clone the repo at  `~/.config/nvim/lua/` or at `~/AppData/Local/nvim/lua` if installing on  windows 
    ```sh
-   git clone https://github.com/ExoSupesu/nvim-config.git
+   git clone https://github.com/ExoSupesu/nvim-config.git .
    ```
 2. [optional] backup init.lua if already
 3. Create init.lua and add below lines:
     ```lua
-    require("user.init")
+    require("user")
     ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
