@@ -58,7 +58,7 @@ This is an example of how to list things you need to use the software and how to
 2. [optional] backup init.lua if already
 3. Create init.lua and add below lines:
     ```lua
-    require("user")
+    require("user.init")
     ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
