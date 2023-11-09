@@ -74,5 +74,10 @@ local plugins={
 },
 {'uga-rosa/ccc.nvim'},
 { 'echasnovski/mini.pairs', version = false },
+ {
+  'nvim-lualine/lualine.nvim',
+  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+},
+    {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'}
 }
 return plugins
