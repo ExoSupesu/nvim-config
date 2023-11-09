@@ -33,3 +33,6 @@ map('n', '<Leader>gs', [[:Telescope git_status<CR>]], { noremap = true, silent =
 map('n', '<Leader>lr', [[:Telescope lsp_references<CR>]], { noremap = true, silent = true })
 map('n', '<Leader>ld', [[:Telescope lsp_document_diagnostics<CR>]], { noremap = true, silent = true })
 map('n', '<Leader>lw', [[:Telescope lsp_workspace_diagnostics<CR>]], { noremap = true, silent = true })
+
+--Neotree
+map('n','<Leader>e',[[ :Neotree reveal<cr>]],{ noremap = true, silent = true })
