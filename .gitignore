@@ -1,0 +1,14 @@
+# Ignore swap files
+*.swp
+*.swo
+*.swn
+
+# Ignore session files
+Session.vim
+
+# Ignore temporary files
+.netrwhist
+
+# Ignore undo files
+undodir/
+
