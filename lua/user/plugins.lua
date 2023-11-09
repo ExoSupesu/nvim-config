@@ -63,7 +63,16 @@ local plugins={
     vim.fn.sign_define("DiagnosticSignInfo", { text = " ", texthl = "DiagnosticSignInfo" })
     vim.fn.sign_define("DiagnosticSignHint", { text = "󰌵", texthl = "DiagnosticSignHint" })
   end,
-}
+},
+    -- Comment
+    {
+    'numToStr/Comment.nvim',
+    opts = {
+        -- add any options here
+    },
+    lazy = false,
+},
+{'uga-rosa/ccc.nvim'}
 
 }
 return plugins
