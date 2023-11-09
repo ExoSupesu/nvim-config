@@ -72,7 +72,7 @@ local plugins={
     },
     lazy = false,
 },
-{'uga-rosa/ccc.nvim'}
-
+{'uga-rosa/ccc.nvim'},
+{ 'echasnovski/mini.pairs', version = false },
 }
 return plugins
