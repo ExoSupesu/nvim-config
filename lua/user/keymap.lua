@@ -35,4 +35,5 @@ map('n', '<Leader>ld', [[:Telescope lsp_document_diagnostics<CR>]], { noremap = 
 map('n', '<Leader>lw', [[:Telescope lsp_workspace_diagnostics<CR>]], { noremap = true, silent = true })
 
 --Neotree
-map('n','<Leader>e',[[ :Neotree reveal<cr>]],{ noremap = true, silent = true })
+map('n', '<Leader>e', [[ :Neotree toggle<cr>]], { noremap = true, silent = true })
+

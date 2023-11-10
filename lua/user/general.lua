@@ -1,4 +1,3 @@
-
 -- Enable line numbers
 vim.o.number = true
 
@@ -28,7 +27,7 @@ vim.o.incsearch = true
 -- Enable line wrapping
 vim.o.wrap = true
 
--- Set the color column at a specific column 
+-- Set the color column at a specific column
 vim.o.colorcolumn = ''
 
 -- Highlight current line
@@ -70,3 +69,4 @@ vim.o.showcmd = true
 
 -- Set highlighting of the current line in normal mode
 vim.o.cursorline = false
+
