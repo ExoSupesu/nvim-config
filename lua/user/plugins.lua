@@ -100,6 +100,15 @@ local plugins = {
         end,
     },
 
+    {
+        "kdheepak/lazygit.nvim",
+        -- optional for floating window border decoration
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+        },
+    },
+    { "akinsho/toggleterm.nvim", version = "*", config = true }
+
 }
 return plugins
 

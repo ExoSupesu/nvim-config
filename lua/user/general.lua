@@ -69,4 +69,5 @@ vim.o.showcmd = true
 
 -- Set highlighting of the current line in normal mode
 vim.o.cursorline = false
+vim.o.clipboard = vim.o.clipboard .. 'unnamedplus'
 
