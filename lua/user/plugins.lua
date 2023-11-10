@@ -1,34 +1,34 @@
 local plugins = {
     --ColorSchemes
     {
-        'AlexvZyl/nordic.nvim',
+        "AlexvZyl/nordic.nvim",
         lazy = false,
         priority = 1000,
         config = function()
-            require 'nordic'.load()
+            require "nordic".load()
         end
     },
 
     --  LSP
-    { 'williamboman/mason.nvim' },
-    { 'williamboman/mason-lspconfig.nvim' },
-    { 'VonHeikemen/lsp-zero.nvim',        branch = 'v3.x' },
-    { 'neovim/nvim-lspconfig' },
-    { 'hrsh7th/cmp-nvim-lsp' },
-    { 'hrsh7th/nvim-cmp' },
-    { 'L3MON4D3/LuaSnip' },
+    { "williamboman/mason.nvim" },
+    { "williamboman/mason-lspconfig.nvim" },
+    { "VonHeikemen/lsp-zero.nvim",        branch = "v3.x" },
+    { "neovim/nvim-lspconfig" },
+    { "hrsh7th/cmp-nvim-lsp" },
+    { "hrsh7th/nvim-cmp" },
+    { "L3MON4D3/LuaSnip" },
 
     --Treesitter
     {
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate',
+        "nvim-treesitter/nvim-treesitter",
+        run = ":TSUpdate",
     },
 
     --telescope
     {
-        'nvim-telescope/telescope.nvim',
-        tag = '0.1.4',
-        dependencies = { 'nvim-lua/plenary.nvim' }
+        "nvim-telescope/telescope.nvim",
+        tag = "0.1.4",
+        dependencies = { "nvim-lua/plenary.nvim" }
     },
 
     --neotree
@@ -41,16 +41,16 @@ local plugins = {
             "nvim-tree/nvim-web-devicons",
             "MunifTanjim/nui.nvim",
             {
-                's1n7ax/nvim-window-picker',
-                version = '2.*',
+                "s1n7ax/nvim-window-picker",
+                version = "2.*",
                 config = function()
-                    require 'window-picker'.setup({
+                    require "window-picker".setup({
                         filter_rules = {
                             include_current_win = false,
                             autoselect_one = true,
                             bo = {
-                                filetype = { 'neo-tree', 'neo-tree-popup', 'notify' },
-                                buftype = { 'terminal', 'quickfix' },
+                                filetype = { "neo-tree", "neo-tree-popup", "notify" },
+                                buftype = { "terminal", "quickfix" },
                             },
                         },
                     })
@@ -67,21 +67,38 @@ local plugins = {
     },
     -- Comment
     {
-        'numToStr/Comment.nvim',
+        "numToStr/Comment.nvim",
         opts = {
             -- add any options here
         },
         lazy = false,
     },
-    { 'uga-rosa/ccc.nvim' },
-    { 'echasnovski/mini.pairs', version = false },
+    { "uga-rosa/ccc.nvim" },
+    { "echasnovski/mini.pairs", version = false },
     {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+        "nvim-lualine/lualine.nvim",
+        requires = { "nvim-tree/nvim-web-devicons", opt = true }
     },
-    { 'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons' },
-    { 'stevearc/conform.nvim' },
-
+    { "akinsho/bufferline.nvim",   version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
+    { "stevearc/conform.nvim" },
+    { "jakewvincent/mkdnflow.nvim" },
+    {
+        "iamcco/markdown-preview.nvim",
+        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+        ft = { "markdown" },
+        build = function() vim.fn["mkdp#util#install"]() end,
+    },
+    {
+        "toppair/peek.nvim",
+        event = { "VeryLazy" },
+        build = "deno task --quiet build:fast",
+        config = function()
+            require("peek").setup()
+            -- refer to `configuration to change defaults`
+            vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
+            vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
+        end,
+    },
 
 }
 return plugins

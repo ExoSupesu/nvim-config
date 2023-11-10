@@ -11,4 +11,5 @@ require("user.autopair")
 require("user.lualine")
 require("user.tabline")
 require("user.conform")
+require("user.mkdn")
 
