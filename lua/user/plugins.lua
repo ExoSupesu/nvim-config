@@ -107,7 +107,8 @@ local plugins = {
             "nvim-lua/plenary.nvim",
         },
     },
-    { "akinsho/toggleterm.nvim", version = "*", config = true }
+    { "akinsho/toggleterm.nvim",   version = "*", config = true },
+    { "xiyaowong/transparent.nvim" },
 
 }
 return plugins
