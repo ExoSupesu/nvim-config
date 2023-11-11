@@ -13,4 +13,5 @@ require("user.tabline")
 require("user.conform")
 require("user.mkdn")
 require("user.transparency")
+require("user.noice")
 

@@ -109,6 +109,14 @@ local plugins = {
     },
     { "akinsho/toggleterm.nvim",   version = "*", config = true },
     { "xiyaowong/transparent.nvim" },
+    -- lazy.nvim
+    {
+        "folke/noice.nvim",
+        dependencies = {
+            "MunifTanjim/nui.nvim",
+            "rcarriga/nvim-notify",
+        }
+    }
 
 }
 return plugins
