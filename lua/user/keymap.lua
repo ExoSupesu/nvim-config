@@ -40,6 +40,9 @@ map("n", "<Leader>e", [[:Neotree toggle<CR>]], { noremap = true, silent = true }
 -- LazyGit
 map("n", "<Leader>g", [[:LazyGit<CR>]], { noremap = true, silent = true })
 
---ToggleTerm
+-- ToggleTerm
 map("n", "<Leader>t", [[:ToggleTerm<CR>]], { noremap = true, silent = true })
+
+-- Dap
+map("n", "<Leader>d", [[:lua require("dapui").toggle()<CR>]], { noremap = true, silent = true })
 

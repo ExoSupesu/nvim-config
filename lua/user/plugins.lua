@@ -36,7 +36,7 @@ local plugins = {
     {
         "nvim-neo-tree/neo-tree.nvim",
         branch = "v3.x",
-        requires = {
+        dependencies = {
             "nvim-lua/plenary.nvim",
             "nvim-tree/nvim-web-devicons",
             "MunifTanjim/nui.nvim",
@@ -77,7 +77,7 @@ local plugins = {
     { "echasnovski/mini.pairs", version = false },
     {
         "nvim-lualine/lualine.nvim",
-        requires = { "nvim-tree/nvim-web-devicons", opt = true }
+        dependencies = { "nvim-tree/nvim-web-devicons", opt = true }
     },
     { "akinsho/bufferline.nvim",   version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
     { "stevearc/conform.nvim" },
@@ -109,14 +109,16 @@ local plugins = {
     },
     { "akinsho/toggleterm.nvim",   version = "*", config = true },
     { "xiyaowong/transparent.nvim" },
-    -- lazy.nvim
+    -- noice.nvim
     {
         "folke/noice.nvim",
         dependencies = {
             "MunifTanjim/nui.nvim",
             "rcarriga/nvim-notify",
         }
-    }
+    },
+    { "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap" } },
+    { "folke/neodev.nvim" }
 
 }
 return plugins
