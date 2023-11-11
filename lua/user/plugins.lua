@@ -118,7 +118,9 @@ local plugins = {
         }
     },
     { "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap" } },
-    { "folke/neodev.nvim" }
+    { "folke/neodev.nvim" },
+    { "SmiteshP/nvim-navic" },
+    { "utilyre/barbecue.nvim" }
 
 }
 return plugins
