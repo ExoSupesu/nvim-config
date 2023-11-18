@@ -1,5 +1,6 @@
 local plugins = {
     --ColorSchemes
+    { "shaunsingh/nord.nvim" },
     {
         "AlexvZyl/nordic.nvim",
         lazy = false,
@@ -79,26 +80,8 @@ local plugins = {
         "nvim-lualine/lualine.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons", opt = true }
     },
-    { "akinsho/bufferline.nvim",   version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
+    { "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
     { "stevearc/conform.nvim" },
-    { "jakewvincent/mkdnflow.nvim" },
-    {
-        "iamcco/markdown-preview.nvim",
-        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-        ft = { "markdown" },
-        build = function() vim.fn["mkdp#util#install"]() end,
-    },
-    {
-        "toppair/peek.nvim",
-        event = { "VeryLazy" },
-        build = "deno task --quiet build:fast",
-        config = function()
-            require("peek").setup()
-            -- refer to `configuration to change defaults`
-            vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
-            vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
-        end,
-    },
 
     {
         "kdheepak/lazygit.nvim",
@@ -120,7 +103,16 @@ local plugins = {
     { "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap" } },
     { "folke/neodev.nvim" },
     { "SmiteshP/nvim-navic" },
-    { "utilyre/barbecue.nvim" }
+    { "utilyre/barbecue.nvim" },
+    {
+        "iamcco/markdown-preview.nvim",
+        run = "cd app && npm install",
+        setup = function()
+            vim.g.mkdp_filetypes = {
+                "markdown" }
+        end,
+        ft = { "markdown" },
+    }
 
 }
 return plugins
